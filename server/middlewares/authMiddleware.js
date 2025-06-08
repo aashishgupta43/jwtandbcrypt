@@ -6,7 +6,7 @@ module.exports.checkUser = (req, res, next) => {
   if (token) {
     jwt.verify(
       token,
-      "aashu",
+      "jwttoken",
       async (err, decodedToken) => {
         if (err) {
           res.json({ status: false });
